@@ -1,0 +1,15 @@
+
+    public static int[] hotpo() {
+        System.out.println("---------------¡HOTPO!---------------");
+        int [] hunnetInts = new int[100];
+        hunnetInts[0] = getIntFromUser("Let's play ¡HOTPO! Enter your starting number!");
+        System.out.println("You chose " + hunnetInts[0] + ". Kewl. Let's start!");
+        for (int i = 1; i < 100; i++) {
+            if (hunnetInts[i--] %2 == 0) {
+                hunnetInts[i] = hunnetInts[i--]/2;
+            } else {
+                hunnetInts[i] = ((hunnetInts[i--]*3) + 1);
+            }
+        }
+        return hunnetInts;
+    }
